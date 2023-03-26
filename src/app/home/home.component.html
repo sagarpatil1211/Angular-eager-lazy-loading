@@ -1,0 +1,20 @@
+<div class="container mt-2">
+    <div class="row">
+      <div class="col-lg-16">
+        <br>
+        <h2>1. Eager Loading </h2>
+        <p><b>Eager</b> loading is loading modules before application starts.</p>
+        <p>To load a feature module eagerly, we need to import that module in application module i.e. <mark>AppModule</mark> using imports metadata of <mark>@NgModule</mark> decorator.</p>
+        <p>Eager loading is good for small applications because at the first hit of the application all the modules are loaded and all the required dependencies are resolved. Now the subsequent access to the application will be faster .</p>
+        <br>
+  
+        <h2>2. Lazy Loading</h2>
+        <p><b>Lazy</b> loading is loading modules on demand.</p>
+        <p>To load a feature module lazily, we need to load it using loadChildren property in route configuration and that feature module must not be imported in application module.</p>
+        <p> Lazy loading is useful when the application size is growing. In lazy loading, feature module will be loaded on demand and hence application start will be faster.</p>
+        <p>If you generate new module with routing you must create lazy loading in app component after that you can use <code>router-outlet</code> in generated module</p>
+        <p>To show lazy loading open consol open network tab after click on lazy Loading see network request </p>
+      </div>
+      
+    </div>
+  </div>
